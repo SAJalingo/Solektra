@@ -242,6 +242,124 @@
   width: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+/* ================================
+   BENEFITS SECTION
+================================ */
+.benefits {
+  padding-block: 6rem;
+  background-color: #fff;
+}
+
+/* ===== Upper Part ===== */
+.benefits__top {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.benefits__content {
+  flex: 1;
+}
+
+.benefits__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.benefits__intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 36rem;
+}
+
+.benefits__lists {
+  display: flex;
+  gap: 3rem;
+}
+
+.benefits__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits__list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.benefits__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-green);
+}
+
+/* Image */
+.benefits__image {
+  flex: 1;
+  height: 90vh;
+}
+
+.benefits__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 1rem;
+  
+}
+
+/* ===== Lower Part ===== */
+.benefits__bottom {
+  display: flex;
+  gap: 3rem;
+}
+
+.benefit-card {
+  flex: 1;
+  text-align: center;
+}
+
+.benefit-card img {
+  height: 3rem;
+  width: auto;
+  margin-bottom: 1.25rem;
+}
+
+.benefit-card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ================================
+   BENEFITS VIDEO SHOWCASE
+================================ */
+.benefits__video {
+  margin-top: 5rem;
+}
+
+.benefits__video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.25rem;
+  background-color: #000;
+}
+
   
 }
 
@@ -286,5 +404,19 @@
 
   .partner img {
     max-height: 3rem;
+  }
+
+  .benefits__top {
+    flex-direction: column;
+  }
+
+  .benefits__lists {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .benefits__bottom {
+    flex-direction: column;
+    gap: 2.5rem;
   }
 }

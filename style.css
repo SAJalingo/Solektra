@@ -1,0 +1,249 @@
+/* ================================
+   CSS VARIABLES
+================================ */
+:root {
+  --color-dark: #373E46;
+  --color-light: #E4ECCC;
+  --color-accent-blue: #30A5D6;
+  --color-accent-green: #95B64A;
+
+  --font-base: 1rem;
+  --font-sm: 0.875rem;
+  --font-lg: 1.125rem;
+
+  --container-max: 72rem;
+  --container-padding: 1.5rem;
+
+  --nav-height: 4.5rem;
+}
+
+/* ================================
+   CSS LAYERS
+================================ */
+@layer reset, base, layout, components, utilities;
+
+/* ================================
+   BASE
+================================ */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-size: var(--font-base);
+    font-family: system-ui, sans-serif;
+    color: var(--color-dark);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+/* ================================
+   LAYOUT
+================================ */
+@layer layout {
+  .container{
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+  }
+  .nav__container {
+    max-width: var(--container-max);
+    padding-inline: var(--container-padding);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--nav-height);
+  }
+}
+
+/* ================================
+   COMPONENTS
+================================ */
+@layer components {
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    background-image: url("../assets/Electric_Bicycle_SOLEKTRA_Logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: var(--color-light);
+    overflow: hidden;
+  }
+
+   /* Overlay for readability */
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(55, 62, 70, 0.65);
+    z-index: 1;
+  }
+
+  .hero__container {
+    position: relative;
+    z-index: 2;
+
+    max-width: var(--container-max);
+    margin-inline: auto;
+
+    padding-top: 6rem;     /* accounts for nav overlap */
+    padding-bottom: 4rem;
+    padding-inline: var(--container-padding);
+
+    display: flex;
+    align-items: center;
+  }
+
+   .hero__content {
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 1.5rem;
+  }
+
+  .hero__description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    color: var(--color-light);
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: transparent;
+  }
+
+  .nav__logo {
+    height: 2.25rem;
+    width: auto;
+  }
+
+  .nav__menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    z-index: 20;
+  }
+
+  .nav__link {
+    font-size: var(--font-sm);
+    color: var(--color-light);
+    transition: color 0.2s ease;
+  }
+
+  .nav__link:hover,
+  .nav__link:focus-visible {
+    color: var(--color-accent-blue);
+  }
+
+  .nav__link--cta {
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    background-color: var(--color-accent-blue);
+    color: #fff;
+  }
+
+  .nav__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav__toggle-line {
+    display: block;
+    width: 1.5rem;
+    height: 0.125rem;
+    background-color: var(--color-light);
+    margin: 0.3rem 0;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.75rem 1.75rem;
+    border-radius: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn--primary {
+    background-color: var(--color-accent-blue);
+    color: #fff;
+  }
+
+  .btn--secondary {
+    border: 1px solid var(--color-light);
+    color: var(--color-light);
+  }
+  
+}
+
+/* ================================
+   MOBILE STYLES
+================================ */
+@media (min-width: 64rem) {
+  .hero__title {
+    font-size: 3.5rem;
+  }
+
+  .hero__content {
+    max-width: 42rem;
+  }
+}
+
+
+@media (max-width: 48rem) {
+  .nav__toggle {
+    display: block;
+  }
+
+  .nav__menu {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--color-dark);
+    padding: 2rem;
+    gap: 1.5rem;
+    display: none;
+  }
+
+  .nav__menu.is-open {
+    display: flex;
+  }
+}

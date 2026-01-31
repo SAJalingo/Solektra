@@ -369,6 +369,83 @@
   background-color: #000;
 }
 
+/* ================================
+   TEAM SECTION
+================================ */
+.team {
+  padding-block: 6rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.team__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.team__intro {
+  font-size: 1rem;
+  max-width: 40rem;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+  color: #555;
+}
+
+/* ===== Founder ===== */
+.team__founder {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card--founder {
+  max-width: 22rem;
+}
+
+.team-card--founder .team-card__image {
+  width: 12rem;
+  height: 12rem;
+}
+
+/* ===== Mentors ===== */
+.team__mentors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.team__mentors .team-card {
+  flex: 1 1 14rem;
+  max-width: 16rem;
+}
+
+/* ===== Card Content ===== */
+.team-card__image {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+}
+
+.team-card__name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.team-card__role {
+  font-size: 0.875rem;
+  color: #666;
+}
   
 }
 
@@ -426,6 +503,15 @@
 
   .benefits__bottom {
     flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .team-card--founder .team-card__image {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .team__mentors {
     gap: 2.5rem;
   }
 }

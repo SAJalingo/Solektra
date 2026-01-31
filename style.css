@@ -410,8 +410,8 @@
 }
 
 .team-card--founder .team-card__image {
-  width: 12rem;
-  height: 12rem;
+  width: 16rem;
+  height: 16rem;
 }
 
 /* ===== Mentors ===== */
@@ -429,10 +429,10 @@
 
 /* ===== Card Content ===== */
 .team-card__image {
-  width: 8rem;
-  height: 8rem;
+  width: 12rem;
+  height: 12rem;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 10%;
   margin-bottom: 1.25rem;
 }
 

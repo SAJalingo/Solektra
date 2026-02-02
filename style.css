@@ -369,7 +369,7 @@
 
 .benefits__video video {
   width: 100%;
-  height: auto;
+  height: 90vh;
   display: block;
   border-radius: 1.25rem;
   background-color: #000;

@@ -181,6 +181,11 @@
     color: #fff;
   }
 
+  .nav__link--cta:hover{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+
   .nav__toggle {
     display: none;
     background: none;

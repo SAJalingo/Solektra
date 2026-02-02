@@ -464,6 +464,7 @@
 
 .gallery {
   background-color: var(--color-light);
+  padding: 5rem 0;
 }
 
 /* Header aligned like other sections */
@@ -499,6 +500,138 @@
   margin-bottom: 1.5rem;
   border-radius: 1rem;
   object-fit: cover;
+}
+
+/* ================================
+   CTA – App Download
+================================ */
+
+.cta {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.cta__layout {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.cta__content {
+  max-width: 34rem;
+}
+
+.cta__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.cta__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: rgba(228, 236, 204, 0.9);
+}
+
+.cta__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta__note {
+  font-size: 0.875rem;
+  opacity: 0.85;
+}
+
+/* App visual */
+.cta__visual img {
+  max-width: 18rem;
+  width: 100%;
+  display: block;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.site-footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding-block: 4rem 2rem;
+}
+
+.footer__layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer__logo {
+  height: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer__description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 28rem;
+  color: rgba(228, 236, 204, 0.9);
+}
+
+/* Navigation */
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__list li {
+  margin-bottom: 0.75rem;
+}
+
+.footer__list a {
+  font-size: 0.875rem;
+  color: rgba(228, 236, 204, 0.9);
+}
+
+.footer__list a:hover {
+  color: var(--color-accent-blue);
+}
+
+/* Contact */
+.footer__contact p {
+  margin: 0 0 0.75rem;
+}
+
+.footer__contact a {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  color: rgba(228, 236, 204, 0.9);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  font-size: 0.875rem;
+  color: var(--color-light);
+}
+
+/* Bottom */
+.footer__bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(228, 236, 204, 0.15);
+  text-align: center;
+  font-size: 0.75rem;
+  opacity: 0.8;
 }
 
   
@@ -624,6 +757,39 @@
 
   .gallery__grid img {
     margin-bottom: 1rem;
+  }
+
+  .cta__layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .cta__content {
+    max-width: 100%;
+  }
+
+  .cta__actions {
+    justify-content: center;
+  }
+
+  .cta__visual img {
+    max-width: 14rem;
+    margin-inline: auto;
+  }
+
+  .footer__layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .footer__description {
+    margin-inline: auto;
+  }
+
+  .footer__socials {
+    justify-content: center;
   }
 
   

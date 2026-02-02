@@ -549,7 +549,6 @@
 
 /* App visual */
 .cta__visual img {
-  max-width: 18rem;
   width: 100%;
   display: block;
 }
@@ -763,6 +762,7 @@
     flex-direction: column;
     text-align: center;
     gap: 2.5rem;
+    padding-bottom: 2rem;
   }
 
   .cta__content {
@@ -776,6 +776,10 @@
   .cta__visual img {
     max-width: 14rem;
     margin-inline: auto;
+  }
+
+  .site-footer{
+    padding-top: 2rem;
   }
 
   .footer__layout {

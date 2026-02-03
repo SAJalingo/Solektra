@@ -704,6 +704,10 @@
     gap: 2.5rem;
   }
 
+  .benefits__video video{
+    height: 50vh;
+  }
+
   /* Center everything */
   .team__layout {
     flex-direction: column;
